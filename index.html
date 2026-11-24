@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="The rider’s guide to RidePulse. Download Helmet Alert for Android, connect your helmet and set up your emergency contacts.">
+  <title>RidePulse — The rider’s guide</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast wrap">
+  <a class="wordmark" href="#main" aria-label="RidePulse home">RidePulse<span aria-hidden="true">.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#system">The helmet</a>
+    <a href="#setup">First ride</a>
+    <a href="#questions">Questions</a>
+  </nav>
+  <a class="nav-app" href="#download">Get the app <span aria-hidden="true">↘</span></a>
+</header>
+<main id="main">
+  <section class="opening wrap" aria-labelledby="opening-title">
+    <div class="lead">
+      <p class="kicker"><span class="stroke"></span> The RidePulse rider’s guide</p>
+      <h1 id="opening-title">Before the<br><em>engine turns.</em></h1>
+      <p class="dek">Pair your helmet, check your location and choose who to reach in an emergency. It starts with Helmet Alert on your Android phone.</p>
+      <div id="download">
+        <a class="download-apk" href="downloads/HelmetAlert.apk" download="HelmetAlert.apk"><span aria-hidden="true">↓</span> Download Helmet Alert</a>
+        <p class="meta">Android 7.0+ &nbsp;/&nbsp; <span data-size>21.1 MB</span> &nbsp;/&nbsp; Prototype v<span data-version>1.0</span></p>
+        <p class="download-feedback" role="status"></p>
+      </div>
+    </div>
+    <figure class="cover">
+      <img src="assets/helmet.webp" alt="Amber light reflected in the visor of a helmet resting on the woodland floor" width="1600" height="1280" fetchpriority="high">
+      <figcaption><span>Photograph by Jay Johnson</span><i>Helmet study</i></figcaption>
+    </figure>
+  </section>
+  <section class="construction wrap" id="system">
+    <header class="chapter"><p class="kicker">Inside the helmet</p><h2>What you carry<br><em>on the road.</em></h2></header>
+    <dl class="parts">
+      <dt>The connection</dt><dd>An ESP32 controller sends helmet status and events to your phone over Bluetooth.</dd>
+      <dt>The sound</dt><dd>Two speakers sit inside the helmet. A built-in microphone picks up your voice for calls.</dd>
+      <dt>The electronics</dt><dd>The circuit board sits at the back of the helmet alongside the amplifier that drives the speakers.</dd>
+    </dl>
+  </section>
+  <section class="alert-section">
+    <div class="wrap alert-layout">
+      <figure class="portrait"><img src="assets/rider-detail.webp" alt="A helmeted rider sitting on a motorcycle in the shade of trees" loading="lazy" width="900" height="1350"><figcaption>Riding photography is illustrative.</figcaption></figure>
+      <div class="alert-copy"><p class="kicker">Emergency alerts</p>
+        <h2>Twenty seconds<br>to say <em>“I’m okay.”</em></h2>
+        <p>If the helmet reports a possible accident or SOS, Helmet Alert starts a countdown. If you’re safe, you can cancel it on your phone or helmet.</p>
+        <p>When the countdown ends, the app attempts to notify your verified emergency contacts with the event time and your phone’s available location.</p>
+        <aside>Detection and delivery depend on the helmet connection, phone permissions and available service. The app does not dispatch emergency responders.</aside>
+      </div>
+    </div>
+  </section>
+  <section class="field wrap" id="setup">
+    <header class="field-heading"><p class="kicker">First ride</p><h2>A few minutes <em>before you leave.</em></h2><p>Do the first setup while parked.</p></header>
+    <div class="field-body">
+      <ol class="steps">
+        <li><h3>Install the app</h3><p><a href="#download">Download the Android APK</a>, then open it from Downloads. If Android asks, allow installation for the browser or file app you used.</p></li>
+        <li><h3>Choose your people</h3><p>Set up your rider profile. Add and verify your emergency contacts, then select your alert destinations.</p></li>
+        <li><h3>Pair with RidePulse</h3><p>Power on your helmet. In your phone’s Bluetooth settings, select <strong>RidePulse</strong>.</p></li>
+        <li><h3>Connect the helmet</h3><p>Open Helmet Alert and tap <strong>Connect helmet</strong>. Grant the permissions for the features you plan to use.</p></li>
+        <li><h3>Check your position</h3><p>In Alerts, check the map, location accuracy and last update. Confirm your contacts are ready and keep Bluetooth and location on during the ride.</p></li>
+      </ol>
+      <figure class="road"><img src="assets/rider-road.webp" alt="A motorcyclist following a bend through green woodland" width="1200" height="1800" loading="lazy"><figcaption>On the bend <span>Photography by Entero</span></figcaption></figure>
+    </div>
+  </section>
+  <section class="notes wrap" id="questions">
+    <div><p class="kicker">Rider support</p><h2>Field <em>notes.</em></h2></div>
+    <div class="answers">
+      <details><summary>How do I update my app?</summary><p>Come back to this page, download the latest APK and install it over your existing compatible version. Direct downloads require you to confirm each update. This Android prototype was published on <span data-date>23 November 2026</span>. <a href="downloads/release.json">View release details and file checksum</a>.</p></details>
+      <details><summary>How do I get the map working?</summary><p>In Alerts, start a location preview and select CARTO. Tap <strong>Get free CARTO key</strong>, follow the provider’s instructions, then paste your key under <strong>Enter CARTO key</strong>. The map follows your phone’s location. <a href="https://www.carto.com/basemaps/apikey/">CARTO key setup</a>.</p></details>
+      <details><summary>Which features need the companion app?</summary><p>Use Helmet Alert for the helmet’s data connection, ride recording, location sharing, countdowns and contact alerts. Pairing for audio alone won’t activate sensor alerts.</p></details>
+      <details><summary>Can I try it without my helmet?</summary><p>Preview your phone’s location or use headset test mode to check Bluetooth audio. You can also run the 20-second simulation from Home. Let your contacts know first because it can send test messages.</p></details>
+      <details><summary>Why does the battery say “Not reported”?</summary><p>The current helmet firmware doesn’t send a charge reading. Once battery sensing is fitted and the firmware reports it, Home can display the percentage.</p></details>
+      <details><summary>Can I install it on my phone?</summary><p>Helmet Alert runs on Android 7.0 and later. An iPhone version is unavailable. If Android blocks the APK, check the installation permission for the app opening the file and keep Play Protect enabled.</p></details>
+      <details><summary>What does this website collect?</summary><p>This page uses no tracking cookies, analytics or sign-in forms. The host may keep standard access logs. The Android app uses its own account services and permissions.</p></details>
+    </div>
+  </section>
+</main>
+<footer class="wrap"><a class="wordmark" href="#main">RidePulse<span>.</span></a><p>EE356 / G26 · Connected helmet prototype</p><a href="#download">Download for Android ↗</a></footer>
+</body>
+</html>
