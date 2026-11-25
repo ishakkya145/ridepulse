@@ -98,8 +98,23 @@ details p { padding-bottom: 19px; color: var(--faded); font-size: 16px; }
 footer { border-top: 1px solid var(--ink); padding-block: 26px; }
 footer p { color: var(--faded); }
 @media (max-width: 780px) {
-  .mast { min-height: 66px; }
-  nav { display: none; }
+  .mast {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2px 12px;
+    min-height: 0;
+    padding-block: 7px;
+  }
+  .mast nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: space-between;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .mast nav::-webkit-scrollbar { display: none; }
+  .mast nav a, .nav-app { min-height: 44px; display: flex; align-items: center; white-space: nowrap; }
   .opening { grid-template-columns: 1fr; gap: 32px; }
   .cover img { aspect-ratio: 1.56; object-position: center 57%; }
   .construction, .notes { grid-template-columns: 1fr; gap: 30px; }
@@ -108,19 +123,24 @@ footer p { color: var(--faded); }
   footer { flex-wrap: wrap; gap: 12px 22px; }
 }
 @media (max-width: 560px) {
+  .wrap { width: 92%; }
   .wordmark { font-size: 35px; }
-  .opening { padding-top: 38px; }
-  h1 { font-size: clamp(69px,18vw,99px); }
+  .opening { padding-block: 34px 46px; gap: 25px; }
+  h1 { font-size: clamp(55px,16.2vw,82px); }
   .lead h1 { margin: 18px 0; }
   .dek { font-size: 16px; }
   #download { margin-top: 22px; }
+  .download-apk { min-height: 52px; width: 100%; justify-content: center; }
   .parts { grid-template-columns: .8fr 1.2fr; }
   dt { font-size: 25px; }
   .alert-layout, .field-body { grid-template-columns: 1fr; gap: 30px; }
   .portrait { grid-row: 2; }
   .portrait img, .road img { aspect-ratio: 1.42; }
   .road img { object-position: center 48%; }
+  .field-heading { margin-bottom: 28px; }
+  summary { min-height: 52px; }
   footer p { order: 3; width: 100%; }
+  footer a { min-height: 44px; display: inline-flex; align-items: center; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
