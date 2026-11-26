@@ -56,6 +56,7 @@ nav a, .nav-app, footer { font-size: .85rem; }
 .lead em { color: var(--rust); }
 .dek { max-width: 39ch; color: var(--faded); }
 #download { margin-top: 29px; }
+.download-versions { display: flex; flex-wrap: wrap; gap: 10px; }
 .download-apk { display: inline-flex; align-items: center; gap: 1.1em; background: var(--ink); color: var(--paper); text-decoration: none; padding: .85em 1.35em; border-radius: 3px; font-weight: 500; }
 .download-apk:hover { color: var(--paper); background: var(--olive); }
 .download-apk span { font-size: 1.35em; line-height: 1; }
