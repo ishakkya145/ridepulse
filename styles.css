@@ -56,7 +56,9 @@ nav a, .nav-app, footer { font-size: .85rem; }
 .lead em { color: var(--rust); }
 .dek { max-width: 39ch; color: var(--faded); }
 #download { margin-top: 29px; }
-.download-versions { display: flex; flex-wrap: wrap; gap: 10px; }
+.download-versions { display: flex; flex-wrap: wrap; gap: 20px 14px; }
+.download-release { max-width: 100%; }
+.download-release .meta { margin: 6px 0 0; }
 .download-apk { display: inline-flex; align-items: center; gap: 1.1em; background: var(--ink); color: var(--paper); text-decoration: none; padding: .85em 1.35em; border-radius: 3px; font-weight: 500; }
 .download-apk:hover { color: var(--paper); background: var(--olive); }
 .download-apk span { font-size: 1.35em; line-height: 1; }
@@ -131,6 +133,7 @@ footer p { color: var(--faded); }
   .lead h1 { margin: 18px 0; }
   .dek { font-size: 16px; }
   #download { margin-top: 22px; }
+  .download-release { width: 100%; }
   .download-apk { min-height: 52px; width: 100%; justify-content: center; }
   .parts { grid-template-columns: .8fr 1.2fr; }
   dt { font-size: 25px; }
