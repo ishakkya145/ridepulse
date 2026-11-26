@@ -12,5 +12,5 @@ document.querySelectorAll('.download-apk').forEach(link => link.addEventListener
   const status = document.querySelector('.download-feedback');
   status.textContent = /iPhone|iPad|iPod/.test(navigator.userAgent)
     ? 'This APK installs on Android only. Open this page on your Android phone.'
-    : 'If the download begins, open HelmetAlert.apk from your downloads to install. If it does not, try the download button again.';
+    : 'If the download begins, open the downloaded APK from your downloads to install. If it does not, try the download button again.';
 }));

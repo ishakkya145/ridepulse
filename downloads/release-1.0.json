@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "versionCode": 1,
+  "buildType": "debug-prototype",
+  "minAndroid": "7.0",
+  "publishedLabel": "23 November 2026",
+  "sizeBytes": 21106904,
+  "sizeLabel": "21.1 MB",
+  "sha256": "65e04fdbf26cd1a562a2494563e11fa6837e5e603a79238f7ae854b3be1758d5",
+  "download": "HelmetAlert.apk"
+}
